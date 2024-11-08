@@ -41,5 +41,5 @@ Answer Questions: Each question is shown on the screen. Enter your answer using 
 View Results: After answering 10 questions, a results screen will display your score and answer details.
 <br><br>
 
-<h3>Thank You for visit</h1>
+<h3>Thank you for visit</h1>
 
