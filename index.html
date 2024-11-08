@@ -1,19 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-         <!-- Welcome page -->
-    <div id="container">
-      <div id="welcome">
-        <h1>WELCOME USER!</h1>
-        
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Welcome Screen -->
+  <div id="welcome-screen">
+    <h1>Welcome to the Quiz App</h1>
+    <p>Test your knowledge in basic arithmetic!</p>
+    <button onclick="showCategoryScreen()">Start</button>
+  </div>
+
+  <!-- Category Selection Screen -->
+  <div id="category-screen" style="display: none;">
+    <h2>Select a Category</h2>
+    <button onclick="startQuiz('Addition')">Addition</button>
+    <button onclick="startQuiz('Subtraction')">Subtraction</button>
+    <button onclick="startQuiz('Multiplication')">Multiplication</button>
+    <button onclick="startQuiz('Division')">Division</button>
+    <button onclick="startQuiz('Counting')">Counting</button>
+  </div>
+
+  <!-- Quiz Question Screen -->
+  <div id="quiz-screen" style="display: none;">
+    <h1 id="question-text"></h1>
+    <div id="answer-input">
+      <input type="text" id="user-answer" readonly>
+      <div id="number-buttons">
+        <button onclick="appendNumber(1)">1</button>
+        <button onclick="appendNumber(2)">2</button>
+        <button onclick="appendNumber(3)">3</button>
+        <button onclick="appendNumber(4)">4</button>
+        <button onclick="appendNumber(5)">5</button>
+        <button onclick="appendNumber(6)">6</button>
+        <button onclick="appendNumber(7)">7</button>
+        <button onclick="appendNumber(8)">8</button>
+        <button onclick="appendNumber(9)">9</button>
+        <button onclick="appendNumber(0)">0</button>
+        <button onclick="undoAnswer()">Undo</button>
       </div>
+      <button onclick="submitAnswer()">Submit</button>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+
+  <!-- Result Summary Screen -->
+  <div id="result-screen" style="display: none;">
+    <h2>Results Summary</h2>
+    <div id="result-details"></div>
+    <p id="score-display"></p>
+    <button onclick="backToCategories()">Back to Categories</button>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
 </html>
