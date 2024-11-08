@@ -42,5 +42,5 @@ View Results: After answering 10 questions, a results screen will display your s
 <br><br>
 
 <h3>Thank you for visit</h3>
-<h3>Link : </h3>https://sangeetarathore.github.io/Quiz/
+<span>Link : </span>https://sangeetarathore.github.io/Quiz/
 
